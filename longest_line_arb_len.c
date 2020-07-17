@@ -17,6 +17,7 @@ int main() {
         }
     }
 
+    printf("\n%d\n", max);
     printf("%s", longest);
 }
 
@@ -34,6 +35,10 @@ int getLine(char line[], int limit) {
     }
 
     line[i] = '\0';
+
+    while((c = getchar()) != EOF && c != '\n') {
+        i++;
+    }
     
     return i;
 }
